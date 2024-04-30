@@ -39,6 +39,14 @@ galleryContainer.addEventListener("click", (event) => {
 
     // Otwórz okno modalne
     instance.show();
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        instance.close();
+      }
+    };
+
+    document.addEventListener("keyup", closeOnEscape);
   }
 });
 console.log(galleryItems);
